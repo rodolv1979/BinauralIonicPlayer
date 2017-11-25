@@ -28,8 +28,8 @@ export class MyApp {
               private menuCtrl: MenuController,
               private authService: AuthService) {
     firebase.initializeApp({
-      apiKey: "AIzaSyCBxOA8a_FhUMisCUZOct0C-V6Bq7dTtfI",
-      authDomain: "voithmanagersionic.firebaseapp.com"
+      apiKey: "AIzaSyBKlYxvvgkWztkAjn4kirtig3HFPd0BZKY",
+      authDomain: "ionic-binaural-audio-player.firebaseapp.com"
     });
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
@@ -44,6 +44,7 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
+      splashScreen.show();
       splashScreen.hide();
     });
   }
@@ -59,7 +60,6 @@ export class MyApp {
     this.menuCtrl.close();
     this.nav.setRoot(SigninPage);
   }
-
 
 
 }
